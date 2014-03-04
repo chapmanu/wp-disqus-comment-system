@@ -230,7 +230,7 @@ case 0:
         <div class="dsq-main"<?php if ($show_advanced) echo ' style="display:none;"'; ?>>
             <h2><?php echo dsq_i('Comments'); ?></h2>
             <iframe src="<?php if ($url) {
-                echo 'http://'.$url.'.'.DISQUS_DOMAIN.'/admin/moderate/';
+                echo HTTP_PROTOCOL.$url.'.'.DISQUS_DOMAIN.'/admin/moderate/';
             } else {
                 echo DISQUS_URL.'admin/moderate/';
             } ?>?template=wordpress" style="width: 100%; height: 80%; min-height: 600px;"></iframe>

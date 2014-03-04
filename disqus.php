@@ -16,6 +16,8 @@ Author URI: http://disqus.com/
 
 require_once(dirname(__FILE__) . '/lib/wp-api.php');
 
+define('HTTP_PROTOCOL', (is_ssl()) ? 'https://' : 'http://');
+
 if (defined('DISQUS_LOCAL')) { // DISQUS defines this for local development purposes
     define('DISQUS_DOMAIN',         'dev.disqus.org:8000');
     define('DISQUS_IMPORTER_URL',   'http://dev.disqus.org:8001/');
